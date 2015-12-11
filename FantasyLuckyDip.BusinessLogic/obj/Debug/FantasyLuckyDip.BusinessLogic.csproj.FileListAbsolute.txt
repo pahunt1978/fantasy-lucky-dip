@@ -1,0 +1,11 @@
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.BusinessLogic.dll
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.BusinessLogic.pdb
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.BusinessLogicInterfaces.dll
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.DataInterfaces.dll
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.DataTransferObjects.dll
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.BusinessLogicInterfaces.pdb
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.DataInterfaces.pdb
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.DataTransferObjects.pdb
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\obj\Debug\FantasyLuckyDip.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\obj\Debug\FantasyLuckyDip.BusinessLogic.dll
+C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.BusinessLogic\obj\Debug\FantasyLuckyDip.BusinessLogic.pdb
