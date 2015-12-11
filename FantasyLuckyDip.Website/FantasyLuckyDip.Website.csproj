@@ -247,7 +247,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59922</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost/FantasyLuckyDip.Website</IISUrl>
+          <IISUrl>http://localhost/FantasyLuckyDip</IISUrl>
           <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
           <IISAppRootUrl>http://localhost/FantasyLuckyDip.Website/LeagueTable</IISAppRootUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
