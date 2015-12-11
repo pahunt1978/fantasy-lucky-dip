@@ -1,0 +1,44 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/png" href="~/Content/images/favicon.png" />    
+    @Styles.Render("~/Bundles/MainDesktopStyles")
+    @Styles.Render("~/Content/Themes/base/JQueryUiCssBundle")    
+</head>
+<body>
+    <span id="main-style"></span>    
+    @Html.Action("GetEventDetails", "Layout")
+
+    <table class="main-header">
+        <tbody>
+            <tr class="top-row">                
+                <td><div><a href="https://fantasyathleticsluckydip.wordpress.com/" target="_blank">Blog</a></div><div><a href="" target="_blank" id="timetable-link">Timetable</a></div></td>
+                <td />
+                <td class="right-text"><div>Beijing</div><div id="event-time"></div></td>
+            </tr>
+            <tr>
+                <td rowspan="3"><img src="~/Content/images/FBLD1.png" class="image" /></td>
+                <td class="centre-cell" id="primary-heading"></td>
+                <td rowspan="3" class="right-text"><img src="~/Content/images/FBLD2.png" class="image" /></td>
+            </tr>
+            <tr>                
+                <td class="centre-cell" id="secondary-heading"></td>                
+            </tr>
+            <tr class="spacer-row">                
+                <td>a</td>                
+            </tr>
+        </tbody>
+    </table>
+
+    @RenderBody()
+
+    @Scripts.Render("~/Bundles/JQueryScripts")
+    @Scripts.Render("~/Bundles/JQueryUiScripts")
+    @Scripts.Render("~/Bundles/MainScripts")
+    @RenderSection("Scripts")
+</body>
+</html>

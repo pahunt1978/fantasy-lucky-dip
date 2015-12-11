@@ -1,0 +1,192 @@
+﻿* {
+    font-family: "Raleway", "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;    
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+a, u {
+    text-decoration: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.centre-text {
+    text-align: center;
+}
+
+.heading {
+    white-space: nowrap;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.main-header {
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: #ff706c;
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.main-header td {
+    width: 33.3%;                    
+}
+
+.main-header .top-row td {
+    padding-top: 0.5em;
+}
+
+.main-header .centre-cell {
+    font-size: 35.2px;
+    font-style: normal;    
+    font-weight: 200;
+    line-height: 0.3em;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: top;
+}
+
+.main-header .image {
+    padding-bottom: 0.5em;
+    padding-top: 1em;    
+    width: 8em;
+}
+
+.league-table {
+    width: 50%;
+    margin: 0 auto;
+    border-collapse: collapse;     
+}
+
+.league-table tr td {    
+    padding: 0.2em;
+}
+
+.league-table .picture-cell {
+    width: 25%;
+    text-align: center;
+}
+
+.league-table .athlete-cell {
+    border-style: solid;
+    border-color: white;
+    border-width: 0.2em;
+}
+
+.league-table .country-cell {
+    border-style: solid;
+    border-color: white;
+    border-width: 0.2em;
+}
+
+.league-table .score-cell {
+    border-style: solid;
+    border-color: white;
+    border-width: 0.2em;
+}
+
+.league-table .position-cell {
+    border-left-style: solid;    
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: white;
+    border-width: 0.2em;
+    width: 3em;    
+}
+
+.league-table .name-cell {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: white;
+    border-width: 0.2em;
+    padding-left: 0.4em; 
+}
+
+.league-table .profile-image-cell {
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-color: white;
+    border-width: 0.2em;
+    width: 48px;
+}
+
+.league-table .athlete-cell {
+    min-width: 100px;
+}
+
+.league-table .country-cell {
+    min-width: 110px;
+}
+
+.league-table .score-cell {
+    width: 4em;
+}
+
+.league-table .image {
+    height: 3em;
+    cursor: pointer;
+}
+
+.league-table .country-image {
+    height: 3em;
+    cursor: pointer;
+}
+
+.league-table .image-name {
+    font-size: small;
+}
+
+.league-table thead {
+    font-size: small;
+}
+
+.athlete-popup {
+    display: none;   
+    white-space: nowrap;
+}
+
+.athlete-popup .discipline {
+    padding-left: 1em;
+    padding-right: 0.5em;
+}
+
+.country-popup {
+    display: none;   
+    white-space: nowrap;
+}
+
+.country-popup .athlete-discipline {
+    padding-left: 1em;
+    padding-right: 0.5em;
+}
+
+.country-popup .image {
+    vertical-align: top;
+    width: 108px;
+}
+
+.country-popup table {
+    width: 100%;
+}
+
+.spacer-row {
+    visibility: hidden;
+}
+
+.medal-header {
+    text-align: center;
+    border-bottom: solid;
+}
+
+.medal {
+    text-align: center;
+}
