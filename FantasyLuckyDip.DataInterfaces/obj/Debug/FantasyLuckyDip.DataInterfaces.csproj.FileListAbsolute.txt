@@ -1,7 +1,0 @@
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataInterfaces\bin\Debug\FantasyLuckyDip.DataInterfaces.dll
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataInterfaces\bin\Debug\FantasyLuckyDip.DataInterfaces.pdb
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataInterfaces\bin\Debug\FantasyLuckyDip.DataTransferObjects.dll
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataInterfaces\bin\Debug\FantasyLuckyDip.DataTransferObjects.pdb
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataInterfaces\obj\Debug\FantasyLuckyDip.DataInterfaces.csprojResolveAssemblyReference.cache
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataInterfaces\obj\Debug\FantasyLuckyDip.DataInterfaces.dll
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataInterfaces\obj\Debug\FantasyLuckyDip.DataInterfaces.pdb

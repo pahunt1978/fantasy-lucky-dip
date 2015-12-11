@@ -1,7 +1,0 @@
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataTransferObjects\bin\Debug\FantasyLuckyDip.DataTransferObjects.dll
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataTransferObjects\bin\Debug\FantasyLuckyDip.DataTransferObjects.pdb
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataTransferObjects\bin\Debug\NodaTime.dll
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataTransferObjects\bin\Debug\NodaTime.xml
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataTransferObjects\obj\Debug\FantasyLuckyDip.DataTransferObjects.csprojResolveAssemblyReference.cache
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataTransferObjects\obj\Debug\FantasyLuckyDip.DataTransferObjects.dll
-C:\Users\PaulH\Documents\GitHub\fantasy-lucky-dip\FantasyLuckyDip.DataTransferObjects\obj\Debug\FantasyLuckyDip.DataTransferObjects.pdb
