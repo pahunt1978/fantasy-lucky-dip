@@ -1,0 +1,4 @@
+<StyleCopViolations>
+  <Violation LineNumber="28" Source="C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataTransferObjects\Athlete.cs" RuleNamespace="StyleCop.CSharp.CsParser" Rule="SyntaxException" RuleId="SA0102">A syntax error has been discovered in file C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataTransferObjects\Athlete.cs on line 28.</Violation>
+  <Violation LineNumber="17" Source="C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataTransferObjects\LeagueTableEntry.cs" RuleNamespace="StyleCop.CSharp.CsParser" Rule="SyntaxException" RuleId="SA0102">A syntax error has been discovered in file C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataTransferObjects\LeagueTableEntry.cs on line 17.</Violation>
+</StyleCopViolations>

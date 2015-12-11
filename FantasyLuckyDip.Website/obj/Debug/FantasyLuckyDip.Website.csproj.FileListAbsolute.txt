@@ -1,0 +1,65 @@
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\FantasyLuckyDip.Website.dll.config
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\FantasyLuckyDip.Website.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\FantasyLuckyDip.Website.pdb
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.Helpers.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.Mvc.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.Razor.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.WebPages.Deployment.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.WebPages.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.WebPages.Razor.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.Helpers.xml
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.Mvc.xml
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.Razor.xml
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.WebPages.xml
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.WebPages.Deployment.xml
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\bin\System.Web.WebPages.Razor.xml
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\obj\Debug\FantasyLuckyDip.Website.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Website\obj\Debug\FantasyLuckyDip.Website.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.Website.dll.config
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.Website.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.Website.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\Antlr3.Runtime.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.BusinessLogicInterfaces.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.DataTransferObjects.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.DependencyInjection.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\Microsoft.Web.Infrastructure.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\Newtonsoft.Json.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\NodaTime.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\StructureMap.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\StructureMap.Net4.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.Helpers.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.Mvc.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.Optimization.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.Razor.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.WebPages.Deployment.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.WebPages.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.WebPages.Razor.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\WebGrease.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.BusinessLogic.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.Data.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.DataInterfaces.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\Dapper.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.BusinessLogicInterfaces.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.DataTransferObjects.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.DependencyInjection.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\Antlr3.Runtime.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\Newtonsoft.Json.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\NodaTime.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\StructureMap.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\StructureMap.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\StructureMap.Net4.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.Helpers.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.Mvc.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.Optimization.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.Razor.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.WebPages.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.WebPages.Deployment.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\System.Web.WebPages.Razor.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.BusinessLogic.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.Data.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\FantasyLuckyDip.DataInterfaces.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\Dapper.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\bin\Dapper.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\obj\Debug\FantasyLuckyDip.Website.csprojResolveAssemblyReference.cache
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\obj\Debug\FantasyLuckyDip.Website.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Website\obj\Debug\FantasyLuckyDip.Website.pdb

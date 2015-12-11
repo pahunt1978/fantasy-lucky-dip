@@ -1,0 +1,16 @@
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.BusinessLogic.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.BusinessLogic.pdb
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.BusinessLogic\obj\Debug\FantasyLuckyDip.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.BusinessLogic\obj\Debug\FantasyLuckyDip.BusinessLogic.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.BusinessLogic\obj\Debug\FantasyLuckyDip.BusinessLogic.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.BusinessLogic.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.BusinessLogic.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.BusinessLogicInterfaces.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.DataInterfaces.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.DataTransferObjects.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.BusinessLogicInterfaces.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.DataInterfaces.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\bin\Debug\FantasyLuckyDip.DataTransferObjects.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\obj\Debug\FantasyLuckyDip.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\obj\Debug\FantasyLuckyDip.BusinessLogic.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.BusinessLogic\obj\Debug\FantasyLuckyDip.BusinessLogic.pdb

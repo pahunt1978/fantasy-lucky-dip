@@ -1,0 +1,49 @@
+﻿* {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;    
+}
+
+.hidden {
+    display: none;
+}
+
+.centre-text {
+    text-align: center;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.main-header {
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.main-header td {
+    width: 33.3%;        
+}
+
+.main-header .centre-cell {    
+    font-size: xx-large;
+}
+
+.league-table {
+    width: 50%;
+    margin: 0 auto;       
+}
+
+.league-table tr:nth-child(odd) {
+    background-color: red;
+}
+
+.league-table .position-cell {
+    width: 3em;    
+}
+
+.league-table .name-cell {
+    padding-left: 0.4em; 
+}
+
+.league-table .profile-image-cell {
+    width: 48px;
+}

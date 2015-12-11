@@ -1,0 +1,11 @@
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.DataInterfaces\bin\Debug\FantasyLuckyDip.DataInterfaces.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.DataInterfaces\bin\Debug\FantasyLuckyDip.DataInterfaces.pdb
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.DataInterfaces\obj\Debug\FantasyLuckyDip.DataInterfaces.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.DataInterfaces\obj\Debug\FantasyLuckyDip.DataInterfaces.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataInterfaces\bin\Debug\FantasyLuckyDip.DataInterfaces.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataInterfaces\bin\Debug\FantasyLuckyDip.DataInterfaces.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataInterfaces\bin\Debug\FantasyLuckyDip.DataTransferObjects.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataInterfaces\bin\Debug\FantasyLuckyDip.DataTransferObjects.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataInterfaces\obj\Debug\FantasyLuckyDip.DataInterfaces.csprojResolveAssemblyReference.cache
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataInterfaces\obj\Debug\FantasyLuckyDip.DataInterfaces.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DataInterfaces\obj\Debug\FantasyLuckyDip.DataInterfaces.pdb

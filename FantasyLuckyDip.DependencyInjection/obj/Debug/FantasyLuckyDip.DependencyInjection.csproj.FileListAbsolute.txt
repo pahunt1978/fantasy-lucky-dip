@@ -1,0 +1,30 @@
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.DependencyInjection.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.DependencyInjection.pdb
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.DependencyInjection\obj\Debug\FantasyLuckyDip.DependencyInjection.csprojResolveAssemblyReference.cache
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.DependencyInjection\obj\Debug\FantasyLuckyDip.DependencyInjection.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.DependencyInjection\obj\Debug\FantasyLuckyDip.DependencyInjection.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.DependencyInjection.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.DependencyInjection.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.BusinessLogic.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.BusinessLogicInterfaces.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.Data.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.DataInterfaces.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\StructureMap.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\StructureMap.Net4.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.DataTransferObjects.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\Dapper.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\Newtonsoft.Json.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.BusinessLogicInterfaces.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.BusinessLogic.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.DataInterfaces.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.Data.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\StructureMap.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\StructureMap.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\StructureMap.Net4.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\FantasyLuckyDip.DataTransferObjects.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\Dapper.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\Dapper.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\bin\Debug\Newtonsoft.Json.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\obj\Debug\FantasyLuckyDip.DependencyInjection.csprojResolveAssemblyReference.cache
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\obj\Debug\FantasyLuckyDip.DependencyInjection.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.DependencyInjection\obj\Debug\FantasyLuckyDip.DependencyInjection.pdb

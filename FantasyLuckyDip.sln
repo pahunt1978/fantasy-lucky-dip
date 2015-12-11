@@ -1,0 +1,82 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyLuckyDip.Website", "FantasyLuckyDip.Website\FantasyLuckyDip.Website.csproj", "{D5AB57F3-2FB8-437E-8D1E-74A508B32143}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. User Interface", "4. User Interface", "{D0D625DF-E440-4816-B561-B6D776A61D94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyLuckyDip.BusinessLogicInterfaces", "FantasyLuckyDip.BusinessLogicInterfaces\FantasyLuckyDip.BusinessLogicInterfaces.csproj", "{FC339F56-64F2-4ED5-B869-02BA29CDE0CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyLuckyDip.BusinessLogic", "FantasyLuckyDip.BusinessLogic\FantasyLuckyDip.BusinessLogic.csproj", "{92E06831-A490-45D2-8392-CAF9BE8066B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyLuckyDip.DataInterfaces", "FantasyLuckyDip.DataInterfaces\FantasyLuckyDip.DataInterfaces.csproj", "{0AEA5C71-6B00-4B36-BC18-935632DC5F05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyLuckyDip.Data", "FantasyLuckyDip.Data\FantasyLuckyDip.Data.csproj", "{B7BC0334-9690-494B-AD70-C30C16541297}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyLuckyDip.DataTransferObjects", "FantasyLuckyDip.DataTransferObjects\FantasyLuckyDip.DataTransferObjects.csproj", "{EA73DEBE-634E-442E-8AB8-D9E092C3BDB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyLuckyDip.DependencyInjection", "FantasyLuckyDip.DependencyInjection\FantasyLuckyDip.DependencyInjection.csproj", "{57E7C93D-1605-4329-8023-FCA0B48AFBC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Other", "1. Other", "{EC3CA846-9015-433F-8E2B-562199D37ECF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Data", "2. Data", "{83AAABDD-F8E2-4E2C-9C36-291370F231D7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Business Logic", "3. Business Logic", "{58CFD051-AD40-4A77-8DBE-C5D869C3F36D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FantasyLuckyDip.Testbed", "FantasyLuckyDip.Testbed\FantasyLuckyDip.Testbed.csproj", "{E16BC7A8-B6C7-4F7A-B8AE-67FE6FAE30C4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D5AB57F3-2FB8-437E-8D1E-74A508B32143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5AB57F3-2FB8-437E-8D1E-74A508B32143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5AB57F3-2FB8-437E-8D1E-74A508B32143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5AB57F3-2FB8-437E-8D1E-74A508B32143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC339F56-64F2-4ED5-B869-02BA29CDE0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC339F56-64F2-4ED5-B869-02BA29CDE0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC339F56-64F2-4ED5-B869-02BA29CDE0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC339F56-64F2-4ED5-B869-02BA29CDE0CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92E06831-A490-45D2-8392-CAF9BE8066B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92E06831-A490-45D2-8392-CAF9BE8066B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92E06831-A490-45D2-8392-CAF9BE8066B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92E06831-A490-45D2-8392-CAF9BE8066B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AEA5C71-6B00-4B36-BC18-935632DC5F05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AEA5C71-6B00-4B36-BC18-935632DC5F05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AEA5C71-6B00-4B36-BC18-935632DC5F05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AEA5C71-6B00-4B36-BC18-935632DC5F05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7BC0334-9690-494B-AD70-C30C16541297}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7BC0334-9690-494B-AD70-C30C16541297}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7BC0334-9690-494B-AD70-C30C16541297}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7BC0334-9690-494B-AD70-C30C16541297}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA73DEBE-634E-442E-8AB8-D9E092C3BDB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA73DEBE-634E-442E-8AB8-D9E092C3BDB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA73DEBE-634E-442E-8AB8-D9E092C3BDB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA73DEBE-634E-442E-8AB8-D9E092C3BDB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57E7C93D-1605-4329-8023-FCA0B48AFBC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57E7C93D-1605-4329-8023-FCA0B48AFBC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57E7C93D-1605-4329-8023-FCA0B48AFBC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57E7C93D-1605-4329-8023-FCA0B48AFBC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E16BC7A8-B6C7-4F7A-B8AE-67FE6FAE30C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16BC7A8-B6C7-4F7A-B8AE-67FE6FAE30C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16BC7A8-B6C7-4F7A-B8AE-67FE6FAE30C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16BC7A8-B6C7-4F7A-B8AE-67FE6FAE30C4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D5AB57F3-2FB8-437E-8D1E-74A508B32143} = {D0D625DF-E440-4816-B561-B6D776A61D94}
+		{FC339F56-64F2-4ED5-B869-02BA29CDE0CE} = {58CFD051-AD40-4A77-8DBE-C5D869C3F36D}
+		{92E06831-A490-45D2-8392-CAF9BE8066B2} = {58CFD051-AD40-4A77-8DBE-C5D869C3F36D}
+		{0AEA5C71-6B00-4B36-BC18-935632DC5F05} = {83AAABDD-F8E2-4E2C-9C36-291370F231D7}
+		{B7BC0334-9690-494B-AD70-C30C16541297} = {83AAABDD-F8E2-4E2C-9C36-291370F231D7}
+		{EA73DEBE-634E-442E-8AB8-D9E092C3BDB1} = {EC3CA846-9015-433F-8E2B-562199D37ECF}
+		{57E7C93D-1605-4329-8023-FCA0B48AFBC4} = {EC3CA846-9015-433F-8E2B-562199D37ECF}
+		{E16BC7A8-B6C7-4F7A-B8AE-67FE6FAE30C4} = {D0D625DF-E440-4816-B561-B6D776A61D94}
+	EndGlobalSection
+EndGlobal

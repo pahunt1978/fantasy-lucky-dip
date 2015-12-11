@@ -1,0 +1,20 @@
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Data\bin\Debug\FantasyLuckyDip.Data.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Data\bin\Debug\FantasyLuckyDip.Data.pdb
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Data\obj\Debug\FantasyLuckyDip.Data.dll
+C:\Development\Home\FantasyLuckyDip\FantasyLuckyDip.Data\obj\Debug\FantasyLuckyDip.Data.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\FantasyLuckyDip.Data.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\FantasyLuckyDip.Data.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\Dapper.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\FantasyLuckyDip.DataInterfaces.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\FantasyLuckyDip.DataTransferObjects.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\Newtonsoft.Json.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\NodaTime.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\FantasyLuckyDip.DataInterfaces.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\FantasyLuckyDip.DataTransferObjects.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\Dapper.pdb
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\Dapper.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\Newtonsoft.Json.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\bin\Debug\NodaTime.xml
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\obj\Debug\FantasyLuckyDip.Data.csprojResolveAssemblyReference.cache
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\obj\Debug\FantasyLuckyDip.Data.dll
+C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\obj\Debug\FantasyLuckyDip.Data.pdb

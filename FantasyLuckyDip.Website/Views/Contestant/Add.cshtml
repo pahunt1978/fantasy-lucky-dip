@@ -1,0 +1,77 @@
+﻿@model FantasyLuckyDip.Website.Models.ContestantAddModel
+
+@{
+    ViewBag.Title = "Add Contestant";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tbody>
+            <tr>
+                <td>
+                    Twitter handle
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.TwitterHandle)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Name
+                </td>
+                <td>
+                    @Html.TextBoxFor(x => x.Name)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Male track athlete
+                </td>
+                <td>
+                    @Html.DropDownListFor(x => x.MaleTrackAthleteId, this.Model.MaleTrackAthletes)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Male field athlete
+                </td>
+                <td>
+                    @Html.DropDownListFor(x => x.MaleFieldAthleteId, this.Model.MaleFieldAthletes)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Female track athlete
+                </td>
+                <td>
+                    @Html.DropDownListFor(x => x.FemaleTrackAthleteId, this.Model.FemaleTrackAthletes)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Female field athlete
+                </td>
+                <td>
+                    @Html.DropDownListFor(x => x.FemaleFieldAthleteId, this.Model.FemaleFieldAthletes)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Country
+                </td>
+                <td>
+                    @Html.DropDownListFor(x => x.CountryId, this.Model.Countries)
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>
+                    <input type="submit" value="Save"/>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+}

@@ -1,0 +1,4 @@
+<StyleCopViolations>
+  <Violation LineNumber="8" Source="C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\DataHelper.cs" RuleNamespace="StyleCop.CSharp.CsParser" Rule="SyntaxException" RuleId="SA0102">A syntax error has been discovered in file C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\DataHelper.cs on line 8.</Violation>
+  <Violation LineNumber="36" Source="C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\TwitterData.cs" RuleNamespace="StyleCop.CSharp.CsParser" Rule="SyntaxException" RuleId="SA0102">A syntax error has been discovered in file C:\Development\Home\Fantasy Lucky Dip\trunk\FantasyLuckyDip.Data\TwitterData.cs on line 36.</Violation>
+</StyleCopViolations>
