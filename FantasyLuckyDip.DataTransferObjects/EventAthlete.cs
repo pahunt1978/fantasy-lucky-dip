@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FantasyLuckyDip.DataTransferObjects
 {
-    public class Athlete
+    public class EventAthlete
     {
-        public Athlete()
+        public EventAthlete()
         {
             this.Disciplines = new List<EventAthleteDiscipline>();
         }
@@ -23,8 +24,16 @@ namespace FantasyLuckyDip.DataTransferObjects
 
         public long CountryId { get; set; }
 
-        public List<EventAthleteDiscipline> Disciplines { get; private set; }        
+        public List<EventAthleteDiscipline> Disciplines { get; }        
 
         public string FullName => $"{this.Forename} {this.Surname}";
+
+        public int Points
+        {
+            get
+            {
+                return this.Disciplines.Sum(x => x.Points);
+            }
+        }
     }
 }

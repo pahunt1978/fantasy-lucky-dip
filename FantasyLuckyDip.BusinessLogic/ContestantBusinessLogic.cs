@@ -17,10 +17,5 @@ namespace FantasyLuckyDip.BusinessLogic
         {
             this.contestantData.AddContestant(contestant, eventId);
         }
-
-        public byte[] GetImage(long contestantId)
-        {
-            return this.contestantData.GetImage(contestantId);
-        }
     }
 }

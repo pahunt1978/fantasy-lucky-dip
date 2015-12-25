@@ -49,20 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContestantEventAthlete.cs" />
+    <Compile Include="ContestantEventCountry.cs" />
     <Compile Include="Country.cs" />
     <Compile Include="Discipline.cs" />
-    <Compile Include="Athlete.cs" />
+    <Compile Include="EventAthlete.cs" />
     <Compile Include="DisciplineType.cs" />
     <Compile Include="Contestant.cs" />
-    <Compile Include="ContestantEventTeam.cs" />
+    <Compile Include="ContestantEventTeamGotzis.cs" />
     <Compile Include="ContestantAthleteScore.cs" />
     <Compile Include="CountryScore.cs" />
     <Compile Include="Event.cs" />
     <Compile Include="EventAthleteDiscipline.cs" />
+    <Compile Include="EventAthleteType.cs" />
+    <Compile Include="EventCountry.cs" />
     <Compile Include="EventCountryDiscipline.cs" />
     <Compile Include="EventAthleteResult.cs" />
     <Compile Include="EventCountryResult.cs" />
+    <Compile Include="EventType.cs" />
     <Compile Include="Gender.cs" />
+    <Compile Include="IContestantEventTeam.cs" />
     <Compile Include="LeagueTableEntry.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TwitterUser.cs" />

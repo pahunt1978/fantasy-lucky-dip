@@ -1,4 +1,5 @@
 ﻿@using System.Web.Optimization
+@model FantasyLuckyDip.Website.Models.ILeagueTableModel
 <!DOCTYPE html>
 
 <html>
@@ -11,14 +12,14 @@
 </head>
 <body>
     <span id="main-style"></span>    
-    @Html.Action("GetEventDetails", "Layout")
+    @Html.Action("GetEventDetails", "Layout", new { Id = this.Model.EventId })
 
     <table class="main-header">
         <tbody>
             <tr class="top-row">                
                 <td><div><a href="https://fantasyathleticsluckydip.wordpress.com/" target="_blank">Blog</a></div><div><a href="" target="_blank" id="timetable-link">Timetable</a></div></td>
                 <td />
-                <td class="right-text"><div>Beijing</div><div id="event-time"></div></td>
+                <td class="right-text"><div id="location">Beijing</div><div id="event-time"></div></td>
             </tr>
             <tr>
                 <td rowspan="3"><img src="~/Content/images/FBLD1.png" class="image" /></td>

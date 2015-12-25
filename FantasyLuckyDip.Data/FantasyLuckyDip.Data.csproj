@@ -59,11 +59,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AthleteData.cs" />
     <Compile Include="ContestantData.cs" />
-    <Compile Include="CountryData.cs" />
     <Compile Include="DataHelper.cs" />
-    <Compile Include="DisciplineData.cs" />
     <Compile Include="EventData.cs" />
     <Compile Include="Interfaces\IDataHelper.cs" />
     <Compile Include="TwitterData.cs" />

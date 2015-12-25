@@ -9,183 +9,194 @@ namespace FantasyLuckyDip.Website.Controllers
 {
     public class LeagueTableController : Controller
     {
-        private const long EventId = 1;
-        
-        private readonly IEventBusinessLogic eventBusinessLogic;
-        private readonly IAthleteBusinessLogic athleteBusinessLogic;
-        private readonly ICountryBusinessLogic countryBusinessLogic;
-        private readonly IDisciplineBusinessLogic disciplineBusinessLogic;
+        private readonly IEventBusinessLogic eventBusinessLogic;                
 
-        public LeagueTableController(IEventBusinessLogic eventBusinessLogic, IAthleteBusinessLogic athleteBusinessLogic, ICountryBusinessLogic countryBusinessLogic, IDisciplineBusinessLogic disciplineBusinessLogic)
+        public LeagueTableController(IEventBusinessLogic eventBusinessLogic)
         {
-            this.eventBusinessLogic = eventBusinessLogic;
-            this.athleteBusinessLogic = athleteBusinessLogic;
-            this.countryBusinessLogic = countryBusinessLogic;
-            this.disciplineBusinessLogic = disciplineBusinessLogic;
+            this.eventBusinessLogic = eventBusinessLogic;                        
         }
 
-        public ActionResult Index()
+        public ActionResult Index(string url)
         {
-            var model = this.GetModel();
+            var model = this.GetModel(url);
             return this.View(model);
-        }
+        }        
 
-        private static void SetCountries(LeagueTableModel model, IEnumerable<Country> countries, IReadOnlyCollection<Athlete> athletes, IReadOnlyCollection<EventAthleteResult> athleteResults, IReadOnlyCollection<Discipline> disciplines)
+        private static void SetContestants(LeagueTableGotzisModel model, IEnumerable<Contestant> contestants, IEnumerable<ContestantEventAthlete> contestantEventAthletes, List<EventAthlete> eventAthletes)
         {
-            foreach (var country in countries)
-            {                                                
-                var leagueTableCountryResultModel = new LeagueTableCountryResultModel
+            foreach (var contestant in contestants)
+            {
+                var contestantModel = model.Contestants.FirstOrDefault(x => x.Id == contestant.Id);
+
+                if (contestantModel == null)
                 {
-                    Id = country.Id,
-                    Name = country.Name,
-                    IsoCode = country.IsoCode
-                };
-
-                var countryAthleteResults = athleteResults.Where(x => x.AthleteCountryId == country.Id);
-
-                foreach (var countryAthleteResult in countryAthleteResults.Where(x => x.Place >= 1 && x.Place <= 3))
-                {
-                    var athlete = athletes.FirstOrDefault(x => x.Id == countryAthleteResult.AthleteId);
-
-                    leagueTableCountryResultModel.Medals.Add(new LeagueTableCountryMedalModel
-                    {
-                        AthleteSurname = athlete.Surname,
-                        DisciplineName = disciplines.First(x => x.Id == countryAthleteResult.DisciplineId).Name                        
-                    });                    
-                }                
-
-                foreach (var countryDiscipline in country.Disciplines)
-                {
-                    var discipline = disciplines.FirstOrDefault(y => y.Id == countryDiscipline.DisciplineId);
-
-                    leagueTableCountryResultModel.Disciplines.Add(new LeagueTableDisciplineModel
-                    {
-                        Name = discipline.Name,
-                        Gender = discipline.Gender,    
-                        ResultsEntered = discipline.ResultsEntered,
-                        Place = countryDiscipline.Place,                        
-                    });
+                    contestantModel = new LeagueTableGotzisContestantModel();
+                    model.Contestants.Add(contestantModel);
                 }
 
-                model.Countries.Add(leagueTableCountryResultModel);
-            }
-        }
+                var filteredContestantEventAthletes = contestantEventAthletes.Where(x => x.ContestantId == contestant.Id);
 
-        private static void SetAthletes(LeagueTableModel model, IEnumerable<Athlete> athletes, List<EventAthleteResult> athleteResults, List<Discipline> disciplines)
-        {
-            foreach (var athlete in athletes)
-            {
-                model.Athletes.Add(new LeagueTableAthleteModel
+                contestantModel.Id = contestant.Id;
+                contestantModel.Position = 1;
+                contestantModel.TwitterHandle = contestant.TwitterHandle;
+                contestantModel.Name = contestant.Name;
+
+                foreach (var contestantEventAthlete in filteredContestantEventAthletes)
                 {
-                    Id = athlete.Id,
-                    Forename = athlete.Forename,
-                    Surname = athlete.Surname,
-                    CountryId = athlete.CountryId,
-                    IaafId = athlete.IaafId,                    
-                    Points = athleteResults.Where(x => x.AthleteId == athlete.Id).Sum(x => x.Points),
-                    Disciplines = athlete.Disciplines.Select(x => new LeagueTableDisciplineModel
-                    {
-                        Name = disciplines.First(y => y.Id == x.DisciplineId).Name,
-                        Place = x.Place,
-                        ResultsEntered = disciplines.First(y => y.Id == x.DisciplineId).ResultsEntered
-                        /*FinalDateTime = new ZonedDateTime(new Instant(x.FinalDateTime), DateTimeZoneProviders.Tzdb[x.TimeZoneId]),
-                        TimeZoneId = x.TimeZoneId*/
-                    }).ToList()
-                });
-            }
-        }
+                    var eventAthlete = eventAthletes.FirstOrDefault(x => x.Id == contestantEventAthlete.AthleteId);
 
-        private static void SetContestants(LeagueTableModel model, IEnumerable<ContestantEventTeam> teams, List<Athlete> athletes, List<Country> countries, List<EventAthleteResult> athleteResults, List<EventCountryResult> countryResults)
-        {
-            foreach (var team in teams)
-            {
-                var maleTrackAthlete = athletes.FirstOrDefault(x => x.Id == team.MaleTrackAthleteId);
-                var maleFieldAthlete = athletes.FirstOrDefault(x => x.Id == team.MaleFieldAthleteId);
-                var femaleTrackAthlete = athletes.FirstOrDefault(x => x.Id == team.FemaleTrackAthleteId);
-                var femaleFieldAthlete = athletes.FirstOrDefault(x => x.Id == team.FemaleFieldAthleteId);
-                var country = countries.FirstOrDefault(x => x.Id == team.CountryId);
-                var teamAthleteResults = athleteResults.Where(x => x.AthleteId == team.MaleTrackAthleteId || x.AthleteId == team.MaleFieldAthleteId || x.AthleteId == team.FemaleTrackAthleteId || x.AthleteId == team.FemaleFieldAthleteId).ToList();
-                var teamAthleteCountryResults = athleteResults.Where(x => x.AthleteCountryId == team.CountryId).ToList();
-                var athleteCountryPoints = teamAthleteCountryResults.Count(x => x.Place >= 1 && x.Place <= 3);
-                var teamCountryResults = countryResults.Where(x => x.CountryId == country.Id);
-                var countryPoints = teamCountryResults.Count(x => x.Place >= 1 && x.Place <= 3);
-
-                model.Contestants.Add(new LeagueTableContestantModel
-                {
-                    Id = team.ContestantId,
-                    Position = 1,
-                    TwitterHandle = team.TwitterHandle,
-                    Name = team.Name,
-                    TotalPoints = teamAthleteResults.Sum(x => x.Points) + athleteCountryPoints + countryPoints,
-                    MaleTrackAthlete = new LeagueTableAthleteModel
+                    var leagueTableAthleteModel = new LeagueTableAthleteModel
                     {
-                        Id = team.MaleTrackAthleteId,                        
-                        Surname = maleTrackAthlete.Surname,
-                        IaafId = maleTrackAthlete.IaafId,                        
-                        Points = teamAthleteResults.Where(x => x.AthleteId == team.MaleTrackAthleteId).Sum(x => x.Points),
-                        Disciplines = maleTrackAthlete.Disciplines.Select(x => new LeagueTableDisciplineModel
-                        {                        
-                            Place = x.Place
+                        Id = eventAthlete.Id,
+                        Surname = eventAthlete.Surname,
+                        CountryId = eventAthlete.CountryId,
+                        Forename = eventAthlete.Forename,
+                        IaafId = eventAthlete.IaafId,
+                        Points = eventAthlete.Points,
+                        Disciplines = eventAthlete.Disciplines.Select(x => new LeagueTableDisciplineModel
+                        {
+                            Name = x.Name,
+                            Place = x.Place,
+                            ResultsEntered = x.ResultsEntered
                         }).ToList()
-                    },
-                    MaleFieldAthlete = new LeagueTableAthleteModel
+                    };
+
+                    switch (contestantEventAthlete.EventAthleteType)
                     {
-                        Id = team.MaleFieldAthleteId,                        
-                        Surname = maleFieldAthlete.Surname,
-                        IaafId = maleFieldAthlete.IaafId,
-                        Points = teamAthleteResults.Where(x => x.AthleteId == team.MaleFieldAthleteId).Sum(x => x.Points),
-                        Disciplines = maleFieldAthlete.Disciplines.Select(x => new LeagueTableDisciplineModel
-                        {
-                            Place = x.Place
-                        }).ToList()                        
-                    },
-                    FemaleTrackAthlete = new LeagueTableAthleteModel
-                    {
-                        Id = team.FemaleTrackAthleteId,
-                        Surname = femaleTrackAthlete.Surname,
-                        IaafId = femaleTrackAthlete.IaafId,
-                        Points = teamAthleteResults.Where(x => x.AthleteId == team.FemaleTrackAthleteId).Sum(x => x.Points),
-                        Disciplines = femaleTrackAthlete.Disciplines.Select(x => new LeagueTableDisciplineModel
-                        {
-                            Place = x.Place
-                        }).ToList()                        
-                    },
-                    FemaleFieldAthlete = new LeagueTableAthleteModel
-                    {
-                        Id = team.FemaleFieldAthleteId,
-                        Surname = femaleFieldAthlete.Surname,
-                        IaafId = femaleFieldAthlete.IaafId,
-                        Points = teamAthleteResults.Where(x => x.AthleteId == team.FemaleFieldAthleteId).Sum(x => x.Points),
-                        Disciplines = femaleFieldAthlete.Disciplines.Select(x => new LeagueTableDisciplineModel
-                        {
-                            Place = x.Place
-                        }).ToList() 
-                    },
-                    Country = new LeagueTableCountryModel
-                    {
-                        Id = team.CountryId,
-                        Name = country.Name,
-                        IsoCode = country.IsoCode,
-                        Points = athleteCountryPoints + countryPoints
+                        case EventAthleteType.Decathlete1:
+                            contestantModel.Decathlete1 = leagueTableAthleteModel;
+                            break;
+                        case EventAthleteType.Decathlete2:
+                            contestantModel.Decathlete2 = leagueTableAthleteModel;
+                            break;
+                        case EventAthleteType.Heptathlete1:
+                            contestantModel.Heptahlete1 = leagueTableAthleteModel;
+                            break;
+                        case EventAthleteType.Heptathlete2:
+                            contestantModel.Heptahlete2 = leagueTableAthleteModel;
+                            break;
                     }
-                });
+                }
+
+                contestantModel.TotalPoints = contestantModel.Decathlete1.Points + contestantModel.Decathlete2.Points + contestantModel.Heptahlete1.Points + (contestantModel.Heptahlete2?.Points ?? 0);
             }
         }
 
-        private LeagueTableModel GetModel()
+        private static void SetContestants(LeagueTableWorldChampionshipsModel model, IEnumerable<Contestant> contestants, IReadOnlyCollection<ContestantEventAthlete> contestantEventAthletes, IReadOnlyCollection<EventAthlete> eventAthletes, IReadOnlyCollection<ContestantEventCountry> contestantEventCountries, IReadOnlyCollection<EventCountry> eventCountries)
         {
-            var teams = this.eventBusinessLogic.GetTeams(EventId);            
-            var athletes = this.athleteBusinessLogic.GetList(EventId);
-            var athleteResults = this.athleteBusinessLogic.GetResults(EventId);
-            var countries = this.countryBusinessLogic.GetList(EventId);
-            var countryResults = this.countryBusinessLogic.GetResults(EventId);
-            var disciplines = this.disciplineBusinessLogic.GetList(EventId);
+            foreach (var contestant in contestants)
+            {
+                var contestantModel = model.Contestants.FirstOrDefault(x => x.Id == contestant.Id);
 
-            var model = new LeagueTableModel();
+                if (contestantModel == null)
+                {
+                    contestantModel = new LeagueTableWorldChampionshipContestantModel();
+                    model.Contestants.Add(contestantModel);
+                }
 
-            SetContestants(model, teams, athletes, countries, athleteResults, countryResults);
-            SetAthletes(model, athletes, athleteResults, disciplines);
-            SetCountries(model, countries, athletes, athleteResults, disciplines);
+                var filteredContestantEventAthletes = contestantEventAthletes.Where(x => x.ContestantId == contestant.Id);
+                
+                contestantModel.Id = contestant.Id;
+                contestantModel.Position = 1;
+                contestantModel.TwitterHandle = contestant.TwitterHandle;
+                contestantModel.Name = contestant.Name;                
+
+                foreach (var contestantEventAthlete in filteredContestantEventAthletes)
+                {
+                    var eventAthlete = eventAthletes.FirstOrDefault(x => x.Id == contestantEventAthlete.AthleteId);
+                    
+                    var leagueTableAthleteModel = new LeagueTableAthleteModel
+                    {
+                        Id = eventAthlete.Id,
+                        Surname = eventAthlete.Surname,
+                        CountryId = eventAthlete.CountryId,
+                        Forename = eventAthlete.Forename,
+                        IaafId = eventAthlete.IaafId,                        
+                        Points = eventAthlete.Points,
+                        Disciplines = eventAthlete.Disciplines.Select(x => new LeagueTableDisciplineModel
+                        {              
+                            Name = x.Name,
+                            Place = x.Place,
+                            ResultsEntered = x.ResultsEntered
+                        }).ToList()
+                    };
+
+                    switch (contestantEventAthlete.EventAthleteType)
+                    {
+                        case EventAthleteType.MaleTrack:
+                            contestantModel.MaleTrackAthlete = leagueTableAthleteModel;
+                            break;
+                        case EventAthleteType.MaleField:
+                            contestantModel.MaleFieldAthlete = leagueTableAthleteModel;
+                            break;
+                        case EventAthleteType.FemaleTrack:
+                            contestantModel.FemaleTrackAthlete = leagueTableAthleteModel;
+                            break;
+                        case EventAthleteType.FemaleField:
+                            contestantModel.FemaleFieldAthlete = leagueTableAthleteModel;
+                            break;
+                    }
+                }
+
+                var contestantEventCountry = contestantEventCountries.FirstOrDefault(x => x.ContestantId == contestant.Id);
+                var eventCountry = eventCountries.FirstOrDefault(x => x.Id == contestantEventCountry.CountryId);
+                
+                if (eventCountry != null)
+                {                    
+                    contestantModel.Country = new LeagueTableCountryResultModel
+                    {
+                        Id = eventCountry.Id,
+                        Name = eventCountry.Name,
+                        IsoCode = eventCountry.IsoCode,
+                        Points = eventCountry.Points,
+                        Disciplines = eventCountry.Disciplines.Select(x => new LeagueTableDisciplineModel
+                        {
+                            Name = x.Name,
+                            Place = x.Place,
+                            ResultsEntered = x.ResultsEntered
+                        }).ToList()
+                    };
+
+                    foreach (var eventAthlete in eventAthletes.Where(x => x.CountryId == eventCountry.Id))
+                    {
+                        foreach (var discipline in eventAthlete.Disciplines.Where(x => x.Place >= 1 && x.Place <= 3))
+                        {
+                            contestantModel.Country.Medals.Add(new LeagueTableCountryMedalModel
+                            {
+                                AthleteSurname = eventAthlete.Surname,
+                                DisciplineName = discipline.Name
+                            });
+                        }                        
+                    }                    
+                }
+
+                contestantModel.TotalPoints = contestantModel.MaleTrackAthlete.Points + contestantModel.MaleFieldAthlete.Points + contestantModel.FemaleTrackAthlete.Points + contestantModel.FemaleFieldAthlete.Points + contestantModel.Country.Points;
+            }                                               
+        }        
+
+        private ILeagueTableModel GetModel(string url)
+        {
+            var @event = this.eventBusinessLogic.Get(url);
+            var contestants = this.eventBusinessLogic.GetContestants(@event.Id);
+            var contestantEventAthletes = this.eventBusinessLogic.GetContestantAthletes(@event.Id);
+            var contestantEventCountries = this.eventBusinessLogic.GetContestantCountries(@event.Id);
+            var eventAthletes = this.eventBusinessLogic.GetAthletes(@event.Id);
+            var eventCountries = this.eventBusinessLogic.GetCountries(@event.Id);            
+            ILeagueTableModel model;
+
+            if (@event.Type == EventType.WorldChampionships)
+            {                
+                model = new LeagueTableWorldChampionshipsModel();
+                SetContestants((LeagueTableWorldChampionshipsModel)model, contestants, contestantEventAthletes, eventAthletes, contestantEventCountries, eventCountries);                                
+            }
+            else
+            {
+                model = new LeagueTableGotzisModel();
+                SetContestants((LeagueTableGotzisModel)model, contestants, contestantEventAthletes, eventAthletes);                
+            }
+            
+            model.EventId = @event.Id;
+            model.Type = @event.Type;
 
             return model;
         }        

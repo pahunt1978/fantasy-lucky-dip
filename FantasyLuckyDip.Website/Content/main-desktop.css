@@ -55,6 +55,10 @@ a, u {
     vertical-align: top;
 }
 
+.main-header #secondary-heading {
+    font-size: 20.2px;
+}
+
 .main-header .image {
     padding-bottom: 0.5em;
     padding-top: 1em;    
@@ -64,7 +68,8 @@ a, u {
 .league-table {
     width: 50%;
     margin: 0 auto;
-    border-collapse: collapse;     
+    border-collapse: collapse;
+    margin-bottom: 2em; 
 }
 
 .league-table tr td {    
@@ -157,6 +162,10 @@ a, u {
 .athlete-popup .discipline {
     padding-left: 1em;
     padding-right: 0.5em;
+}
+
+.athlete-popup .image {
+    vertical-align: top;
 }
 
 .country-popup {

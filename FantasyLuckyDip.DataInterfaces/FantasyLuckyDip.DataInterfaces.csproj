@@ -44,10 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IAthleteData.cs" />
     <Compile Include="IContestantData.cs" />
-    <Compile Include="ICountryData.cs" />
-    <Compile Include="IDisciplineData.cs" />
     <Compile Include="IEventData.cs" />
     <Compile Include="ITwitterData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

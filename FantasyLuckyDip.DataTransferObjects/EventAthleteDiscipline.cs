@@ -6,6 +6,12 @@
 
         public long DisciplineId { get; set; }
 
-        public int Place { get; set; }           
+        public int Place { get; set; }
+
+        public int Points { get; set; }
+
+        public string Name { get; set; }
+
+        public bool ResultsEntered { get; set; }
     }
 }

@@ -1,0 +1,22 @@
+﻿@model FantasyLuckyDip.Website.Models.LeagueTableAthleteModel
+
+<div id="athlete-popup-@this.Model.Id" class="athlete-popup" title="@this.Model.FullName">
+    <table>        
+        @for (var i = 0; i < this.Model.Disciplines.Count; i++)
+        {
+            var athleteDiscipline = this.Model.Disciplines[i];
+
+            <tr>
+                @if (i == 0)
+                {
+                    <td rowspan="@this.Model.Disciplines.Count" class="image">
+                        <img src="@Url.Action("GetAthleteProfileImage", "Image", new { athleteId = this.Model.IaafId })" data-id="@this.Model.Id" class="image"/>
+                    </td>
+                }
+                <td class="discipline">@athleteDiscipline.Name:</td>
+                <td>@athleteDiscipline.PlaceDisplay</td>
+            </tr>
+        }
+    </table>
+</div>
+

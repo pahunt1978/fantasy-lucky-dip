@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace FantasyLuckyDip.Website.Models
 {
-    public class LeagueTableContestantModel : IComparable
+    public class LeagueTableWorldChampionshipContestantModel : IComparable
     {
         public long Id { get; set; }
 
@@ -23,7 +23,7 @@ namespace FantasyLuckyDip.Website.Models
 
         public LeagueTableAthleteModel FemaleFieldAthlete { get; set; }
 
-        public LeagueTableCountryModel Country { get; set; }
+        public LeagueTableCountryResultModel Country { get; set; }
 
         public int AthletePoints => this.MaleTrackAthlete.Points + this.MaleFieldAthlete.Points + this.FemaleTrackAthlete.Points + this.FemaleFieldAthlete.Points;
 
@@ -90,7 +90,7 @@ namespace FantasyLuckyDip.Website.Models
             }
         }
 
-        public int EigthPlaceCount
+        public int EighthPlaceCount
         {
             get
             {
@@ -108,7 +108,7 @@ namespace FantasyLuckyDip.Website.Models
                 return -1;
             }
 
-            var otherContestant = obj as LeagueTableContestantModel;
+            var otherContestant = obj as LeagueTableWorldChampionshipContestantModel;
 
             if (otherContestant != null)
             {
@@ -202,12 +202,12 @@ namespace FantasyLuckyDip.Website.Models
                     return 1;
                 }
 
-                if (this.EigthPlaceCount > otherContestant.EigthPlaceCount)
+                if (this.EighthPlaceCount > otherContestant.EighthPlaceCount)
                 {
                     return -1;
                 }
 
-                if (this.EigthPlaceCount < otherContestant.EigthPlaceCount)
+                if (this.EighthPlaceCount < otherContestant.EighthPlaceCount)
                 {
                     return 1;
                 }
@@ -215,7 +215,7 @@ namespace FantasyLuckyDip.Website.Models
                 return 0;
             }
             
-            throw new ArgumentException("obj parameter is not of type LeagueTableContestantModel");
+            throw new ArgumentException("obj parameter is not of type LeagueTableWorldChampionshipContestantModel");
         }
     }
 }

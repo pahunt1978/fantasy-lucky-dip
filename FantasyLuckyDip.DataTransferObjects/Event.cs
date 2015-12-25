@@ -1,4 +1,6 @@
-﻿namespace FantasyLuckyDip.DataTransferObjects
+﻿using System.Diagnostics;
+
+namespace FantasyLuckyDip.DataTransferObjects
 {
     public class Event
     {
@@ -13,5 +15,9 @@
         public string TimeZone { get; set; }
 
         public string TimetableUrl { get; set; }
+
+        public string Location { get; set; }
+
+        public EventType Type { get; set; }
     }
 }

@@ -38,9 +38,13 @@ namespace FantasyLuckyDip.Website.Models
                     case 7:
                         return "7th";                        
                     case 8:
-                        return "8th";                        
+                        return "8th";
+                    case 9:
+                        return "9th";
+                    case 10:
+                        return "10th";
                     default:
-                        return this.ResultsEntered ? "Outside top 8" : "?";
+                        return this.ResultsEntered ? "Outside top 10" : "?";
                 }                
             }
         }

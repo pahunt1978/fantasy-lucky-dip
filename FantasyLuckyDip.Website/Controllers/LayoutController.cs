@@ -12,16 +12,17 @@ namespace FantasyLuckyDip.Website.Controllers
             this.eventBusinessLogic = eventBusinessLogic;
         }
 
-        public ActionResult GetEventDetails()
+        public ActionResult GetEventDetails(long id)
         {
             const string HtmlTemplate = "<div id=\"{0}\" class=\"hidden\">{1}</div>";
 
-            var eventDetail = this.eventBusinessLogic.Get(1);
+            var eventDetail = this.eventBusinessLogic.Get(id);
 
             var html = string.Format(HtmlTemplate, "PrimaryHeadingData", eventDetail.PrimaryHeading);
             html += string.Format(HtmlTemplate, "SecondaryHeadingData", eventDetail.SecondaryHeading);
             html += string.Format(HtmlTemplate, "TimeZoneData", eventDetail.TimeZone);
             html += string.Format(HtmlTemplate, "TimetableLinkData", eventDetail.TimetableUrl);
+            html += string.Format(HtmlTemplate, "LocationData", eventDetail.Location);
 
             return this.Content(html);
         }        

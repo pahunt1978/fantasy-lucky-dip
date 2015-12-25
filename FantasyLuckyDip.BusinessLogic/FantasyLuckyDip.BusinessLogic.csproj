@@ -44,10 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AthleteBusinessLogic.cs" />
     <Compile Include="ContestantBusinessLogic.cs" />
-    <Compile Include="CountryBusinessLogic.cs" />
-    <Compile Include="DisciplineBusinessLogic.cs" />
     <Compile Include="EventBusinessLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TwitterBusinessLogic.cs" />

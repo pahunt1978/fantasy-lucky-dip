@@ -1,205 +1,22 @@
-﻿@using System.Globalization
-@using FantasyLuckyDip.DataTransferObjects
-@using FantasyLuckyDip.Website.Models
-@model FantasyLuckyDip.Website.Models.LeagueTableModel
+﻿@using FantasyLuckyDip.DataTransferObjects
+@model FantasyLuckyDip.Website.Models.ILeagueTableModel
 
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "League Table";
 }
 
-@foreach (var athlete in this.Model.Athletes)
-{
-    <div id="athlete-popup-@athlete.Id" class="athlete-popup" title="@athlete.FullName">
-        <table>
-            @for (var i = 0; i < 5; i++)
-            {
-                if (i == 0 && athlete.Disciplines.Any())
-                {
-                    var discipline = athlete.Disciplines[i];
-
-                    <tr>
-                        <td rowspan="@(athlete.Disciplines.Count + 1 < 5 ? 5 : athlete.Disciplines.Count + 1)"><img src="@Url.Content("https://iaafmedia.s3.amazonaws.com/athletes/" + @athlete.IaafId + ".jpg")" class="image" onerror="this.src = '@Url.Action("GetNoPictureAvailableImage", "Image")';" /></td>
-                        <td class="discipline">@discipline.Name:</td>
-                        <td>@discipline.PlaceDisplay</td>
-                    </tr>
-                }
-                else if (i < athlete.Disciplines.Count && athlete.Disciplines.Any())
-                {
-                    var discipline = athlete.Disciplines[i];
-
-                    <tr>
-                        <td class="discipline">@discipline.Name:</td>
-                        <td>@discipline.PlaceDisplay</td>
-                    </tr>
-                }
-                else
-                {
-                    <tr class="spacer-row">
-                        <td>a</td>
-                    </tr>
-                }
-            }
-        </table>
-    </div>
+@{
+    switch (this.Model.Type)
+    {
+        case EventType.WorldChampionships:
+            Html.RenderPartial("WorldChampionships", this.Model);
+            break;
+        case EventType.Gotzis:
+            Html.RenderPartial("Gotzis", this.Model);
+            break;
+    }
 }
-
-@foreach (var country in this.Model.Countries)
-{
-    var medals = country.Medals.OrderBy(x => x.AthleteSurname).ThenBy(x => x.DisciplineName).ToList();
-    var disciplines = country.Disciplines.OrderBy(x => x.Name).ToList();
-    var rowCount = disciplines.Count + medals.Count + (disciplines.Any() ? 3 : 0) + (!disciplines.Any() && medals.Any() ? 1 : 0);
-
-    <div id="country-popup-@country.Id" class="country-popup" title="@country.Name">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="image" rowspan="@rowCount"><img src="@Url.Content("http://api.hostip.info/images/flags/" + @country.IsoCode.ToLowerInvariant() + ".gif")" /></td>
-
-                    @if (disciplines.Any())
-                    {
-                        <td class="athlete-discipline">@disciplines[0].Name (@(disciplines[0].Gender == Gender.Male ? "M" : "W")):</td>
-                        <td>@disciplines[0].CountryPlaceDisplay</td>
-                    }
-                    else
-                    {
-                        <td colspan="2" class="medal-header">Medals</td>
-                    }
-                </tr>
-
-                @for (var i = 1; i < disciplines.Count; i++)
-                {
-                    <tr>
-                        <td class="athlete-discipline">@disciplines[i].Name (@(disciplines[i].Gender == Gender.Male ? "M" : "W")):</td>
-                        <td>@disciplines[i].CountryPlaceDisplay</td>
-                    </tr>
-                }
-
-                @if (disciplines.Any())
-                {
-                    <tr class="spacer-row">
-                        <td colspan="2">a</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2" class="medal-header">Medals</td>
-                    </tr>
-                }
-
-                @if (medals.Any())
-                {
-                    foreach (var medal in medals)
-                    {
-                        <tr>
-                            <td colspan="2" class="medal">@medal.AthleteDiscipline</td>
-                        </tr>
-                    }
-                }
-                else
-                {
-                    <tr>
-                        <td colspan="2" class="medal">None</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-}
-
-<table class="league-table" cellspacing="0" cellpadding="0">
-    <thead>
-        <tr>
-            <td colspan="3"></td>
-            <td class="centre-text">
-                Male Track
-            </td>
-            <td class="centre-text">
-                Male Field
-            </td>
-            <td class="centre-text">
-                Female Track
-            </td>
-            <td class="centre-text">
-                Female Field
-            </td>
-            <td class="centre-text">
-                Bonus Country
-            </td>
-            <td class="centre-text">
-                Score
-            </td>
-        </tr>
-    </thead>
-    <tbody>
-        @{
-            var position = 1;
-            LeagueTableContestantModel previousContestant = null;
-            var previousPosition = 1;            
-            this.Model.Contestants.Sort();
-            
-            foreach (var contestant in this.Model.Contestants)
-            {
-                <tr>
-                    <td class="position-cell centre-text">
-                        @(contestant.CompareTo(previousContestant) > 0 ? position.ToString(CultureInfo.CurrentCulture) : previousPosition.ToString(CultureInfo.CurrentCulture))
-                    </td>
-                    <td class="profile-image-cell">
-                        <img src="@Url.Action("GetTwitterProfileImage", "Image", new { contestantId = contestant.Id, twitterHandle = contestant.TwitterHandle })" />                                            
-                    </td>
-                    <td class="name-cell">
-                        <a href="https://www.twitter.com/@contestant.TwitterHandle" target="_blank">@contestant.DisplayName</a>
-                    </td>
-                    <td class="centre-text athlete-cell">
-                        <div>
-                            <img src="@Url.Content("https://iaafmedia.s3.amazonaws.com/athletes/" + @contestant.MaleTrackAthlete.IaafId + ".jpg")" data-id="@contestant.MaleTrackAthlete.Id" class="image" onerror="this.src = '@Url.Action("GetNoPictureAvailableImage", "Image")';" />
-                        </div>
-                        <div class="image-name">
-                            @contestant.MaleTrackAthlete.Surname (@contestant.MaleTrackAthlete.Points)
-                        </div>
-                    </td>
-                    <td class="centre-text athlete-cell">
-                        <div>
-                            <img src="@Url.Content("https://iaafmedia.s3.amazonaws.com/athletes/" + @contestant.MaleFieldAthlete.IaafId + ".jpg")" data-id="@contestant.MaleFieldAthlete.Id" class="image" onerror="this.src = '@Url.Action("GetNoPictureAvailableImage", "Image")';" />
-                        </div>
-                        <div class="image-name">
-                            @contestant.MaleFieldAthlete.Surname (@contestant.MaleFieldAthlete.Points)
-                        </div>
-                    </td>
-                    <td class="centre-text athlete-cell">
-                        <div>
-                            <img src="@Url.Content("https://iaafmedia.s3.amazonaws.com/athletes/" + @contestant.FemaleTrackAthlete.IaafId + ".jpg")" data-id="@contestant.FemaleTrackAthlete.Id" class="image" onerror="this.src = '@Url.Action("GetNoPictureAvailableImage", "Image")';" />
-                        </div>
-                        <div class="image-name">
-                            @contestant.FemaleTrackAthlete.Surname (@contestant.FemaleTrackAthlete.Points)
-                        </div>
-                    </td>
-                    <td class="centre-text athlete-cell">
-                        <div>
-                            <img src="@Url.Content("https://iaafmedia.s3.amazonaws.com/athletes/" + @contestant.FemaleFieldAthlete.IaafId + ".jpg")" data-id="@contestant.FemaleFieldAthlete.Id" class="image" onerror="this.src = '@Url.Action("GetNoPictureAvailableImage", "Image")';" />
-                        </div>
-                        <div class="image-name">
-                            @contestant.FemaleFieldAthlete.Surname (@contestant.FemaleFieldAthlete.Points)
-                        </div>
-                    </td>
-                    <td class="centre-text country-cell">
-                        <div>
-                            <img src="@Url.Content("http://api.hostip.info/images/flags/" + @contestant.Country.IsoCode.ToLowerInvariant() + ".gif")" data-id="@contestant.Country.Id" class="country-image" />
-                        </div>
-                        <div class="image-name">
-                            @contestant.Country.Name (@contestant.Country.Points)
-                        </div>
-                    </td>
-                    <td class="score-cell centre-text">
-                        @contestant.TotalPoints
-                    </td>
-                </tr>
-
-                previousPosition = contestant.CompareTo(previousContestant) > 0 ? position : previousPosition;
-                previousContestant = contestant;
-                position++;
-            }
-        }
-    </tbody>
-</table>
 
 @section Scripts {
     <script type="text/javascript" src="~/Scripts/league-table.js"></script>

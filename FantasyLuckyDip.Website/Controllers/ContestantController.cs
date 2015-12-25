@@ -1,9 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
+﻿using System;
 using System.Web.Mvc;
 using FantasyLuckyDip.BusinessLogicInterfaces;
-using FantasyLuckyDip.DataTransferObjects;
 using FantasyLuckyDip.Website.Models;
 
 namespace FantasyLuckyDip.Website.Controllers
@@ -12,13 +9,11 @@ namespace FantasyLuckyDip.Website.Controllers
     {
         private const long EventId = 1;
 
-        private readonly IContestantBusinessLogic contestantBusinessLogic;
-        private readonly IAthleteBusinessLogic athleteBusinessLogic;
+        private readonly IContestantBusinessLogic contestantBusinessLogic;        
 
-        public ContestantController(IContestantBusinessLogic contestantBusinessLogic, IAthleteBusinessLogic athleteBusinessLogic)
+        public ContestantController(IContestantBusinessLogic contestantBusinessLogic)
         {
             this.contestantBusinessLogic = contestantBusinessLogic;
-            this.athleteBusinessLogic = athleteBusinessLogic;
         }
 
         public ActionResult Add()
@@ -30,7 +25,7 @@ namespace FantasyLuckyDip.Website.Controllers
         [HttpPost]
         public ActionResult Add(ContestantAddInputModel model)
         {
-            var contestant = new Contestant
+            /*var contestant = new Contestant
             {
                 TwitterHandle = model.TwitterHandle,
                 Name = model.Name,
@@ -41,14 +36,14 @@ namespace FantasyLuckyDip.Website.Controllers
                 CountryId = model.CountryId
             };
 
-            this.contestantBusinessLogic.AddContestant(contestant, EventId);
+            this.contestantBusinessLogic.AddContestant(contestant, EventId);*/
 
             return this.RedirectToAction("Add");
         }
 
         private ContestantAddModel GetContestantAddModel()
         {
-            var athletes = this.athleteBusinessLogic.GetList(EventId);
+            /*var athletes = this.athleteBusinessLogic.GetList(EventId);
 
             return new ContestantAddModel
             {
@@ -57,7 +52,9 @@ namespace FantasyLuckyDip.Website.Controllers
                 FemaleTrackAthletes = athletes.Where(x => x.DisciplineType == DisciplineType.Track && x.Gender == Gender.Female).Select(x => new SelectListItem { Value = x.Id.ToString(CultureInfo.CurrentCulture), Text = x.FullName }).ToList(),
                 FemaleFieldAthletes = athletes.Where(x => x.DisciplineType == DisciplineType.Field && x.Gender == Gender.Female).Select(x => new SelectListItem { Value = x.Id.ToString(CultureInfo.CurrentCulture), Text = x.FullName }).ToList(),
                 Countries = new List<SelectListItem> { new SelectListItem { Value = "1", Text = "Jamaica" } }
-            };
+            };*/
+
+            throw new NotImplementedException();
         }
     }
 }

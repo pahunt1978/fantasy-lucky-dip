@@ -16,8 +16,10 @@ namespace FantasyLuckyDip.Website.Models
 
         public string IsoCode { get; set; }
 
-        public List<LeagueTableCountryMedalModel> Medals { get; private set; }
+        public int Points { get; set; }
 
-        public List<LeagueTableDisciplineModel> Disciplines { get; private set; }
+        public List<LeagueTableCountryMedalModel> Medals { get; set; }
+
+        public List<LeagueTableDisciplineModel> Disciplines { get; set; }        
     }
 }

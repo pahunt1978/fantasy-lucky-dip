@@ -1,0 +1,107 @@
+﻿@using System.Globalization
+@using FantasyLuckyDip.Website.Models
+@model FantasyLuckyDip.Website.Models.LeagueTableGotzisModel
+
+@foreach (var athlete in this.Model.Contestants.Select(x => x.Decathlete1).Concat(this.Model.Contestants.Select(x => x.Decathlete2)).Concat(this.Model.Contestants.Select(x => x.Heptahlete1)).Concat(this.Model.Contestants.Select(x => x.Heptahlete2)).Distinct())
+{
+    if (athlete == null)
+    {
+        continue;
+    }
+
+    Html.RenderPartial("AthletePopup", athlete);
+}
+
+<table class="league-table">
+    <thead>
+        <tr>
+            <td colspan="3"></td>
+            <td class="centre-text">
+                Decathlete 1
+            </td>
+            <td class="centre-text">
+                Decathlete 2
+            </td>
+            <td class="centre-text">
+                Heptathlete 1
+            </td>
+            <td class="centre-text">
+                Heptathlete 2
+            </td>
+            <td class="centre-text">
+                Score
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            var position = 1;
+            LeagueTableGotzisContestantModel previousContestant = null;
+            var previousPosition = 1;
+            this.Model.Contestants.Sort();
+
+            foreach (var contestant in this.Model.Contestants)
+            {
+                <tr>
+                    <td class="position-cell centre-text">
+                        @(contestant.CompareTo(previousContestant) > 0 ? position.ToString(CultureInfo.CurrentCulture) : previousPosition.ToString(CultureInfo.CurrentCulture))
+                    </td>
+                    <td class="profile-image-cell">
+                        <img src="@Url.Action("GetTwitterProfileImage", "Image", new { contestantId = contestant.Id, twitterHandle = contestant.TwitterHandle })" />
+                    </td>
+                    <td class="name-cell">
+                        <a href="https://www.twitter.com/@contestant.TwitterHandle" target="_blank">@contestant.DisplayName</a>
+                    </td>
+                    <td class="centre-text athlete-cell">
+                        <div>
+                            <img src="@Url.Action("GetAthleteProfileImage", "Image", new { athleteId = contestant.Decathlete1.IaafId })" data-id="@contestant.Decathlete1.Id" class="image" />
+                        </div>
+                        <div class="image-name">
+                            @contestant.Decathlete1.Surname (@contestant.Decathlete1.Points)
+                        </div>
+                    </td>
+                    <td class="centre-text athlete-cell">
+                        <div>
+                            <img src="@Url.Action("GetAthleteProfileImage", "Image", new { athleteId = contestant.Decathlete2.IaafId })" data-id="@contestant.Decathlete2.Id" class="image" />
+                        </div>
+                        <div class="image-name">
+                            @contestant.Decathlete2.Surname (@contestant.Decathlete2.Points)
+                        </div>
+                    </td>
+                    <td class="centre-text athlete-cell">
+                        <div>
+                            <img src="@Url.Action("GetAthleteProfileImage", "Image", new { athleteId = contestant.Heptahlete1.IaafId })" data-id="@contestant.Heptahlete1.Id" class="image" />
+                        </div>
+                        <div class="image-name">
+                            @contestant.Heptahlete1.Surname (@contestant.Heptahlete1.Points)
+                        </div>
+                    </td>
+
+                    @if (contestant.Heptahlete2 != null)
+                    {
+                        <td class="centre-text athlete-cell">
+                            <div>
+                                <img src="@Url.Action("GetAthleteProfileImage", "Image", new { athleteId = contestant.Heptahlete2.IaafId })" data-id="@contestant.Heptahlete2.Id" class="image" />
+                            </div>
+                            <div class="image-name">
+                                @contestant.Heptahlete2.Surname (@contestant.Heptahlete2.Points)
+                            </div>
+                        </td>
+                    }
+                    else
+                    {
+                        <td class="centre-text athlete-cell" />
+                    }
+
+                    <td class="score-cell centre-text">
+                        @contestant.TotalPoints
+                    </td>
+                </tr>
+
+                previousPosition = contestant.CompareTo(previousContestant) > 0 ? position : previousPosition;
+                previousContestant = contestant;
+                position++;
+            }
+        }
+    </tbody>
+</table>

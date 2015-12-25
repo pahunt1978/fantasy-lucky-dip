@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Configuration;
+using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using FantasyLuckyDip.DependencyInjection;
@@ -8,6 +9,8 @@ namespace FantasyLuckyDip.Website
 {
     public class MvcApplication : System.Web.HttpApplication
     {
+        public static bool ShowImages { get; } = ConfigurationManager.AppSettings["ShowImages"] == "true";
+
         protected void Application_Start()
         {
             var container = StructureMapCoreSetup.Configure();
@@ -15,7 +18,7 @@ namespace FantasyLuckyDip.Website
 
             AreaRegistration.RegisterAllAreas();
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+            RouteConfig.RegisterRoutes(RouteTable.Routes);                                   
         }
     }
 }

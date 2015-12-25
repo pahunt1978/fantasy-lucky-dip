@@ -13,6 +13,7 @@ function LayoutManager() {
         $('#primary-heading').text($('#PrimaryHeadingData').text());
         $('#secondary-heading').text($('#SecondaryHeadingData').text());
         $('#timetable-link').attr("href", $('#TimetableLinkData').text());
+        $('#location').text($('#LocationData').text());
         
         timeZone = $('#TimeZoneData').text();
         updateClock();        
