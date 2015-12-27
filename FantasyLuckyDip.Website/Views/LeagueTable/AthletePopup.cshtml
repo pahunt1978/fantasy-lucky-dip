@@ -1,22 +1,20 @@
-﻿@model FantasyLuckyDip.Website.Models.LeagueTableAthleteModel
+﻿@using FantasyLuckyDip.Website.Models
+@model FantasyLuckyDip.Website.Models.LeagueTableAthleteModel
 
-<div id="athlete-popup-@this.Model.Id" class="athlete-popup" title="@this.Model.FullName">
-    <table>        
-        @for (var i = 0; i < this.Model.Disciplines.Count; i++)
-        {
-            var athleteDiscipline = this.Model.Disciplines[i];
-
-            <tr>
-                @if (i == 0)
-                {
-                    <td rowspan="@this.Model.Disciplines.Count" class="image">
-                        <img src="@Url.Action("GetAthleteProfileImage", "Image", new { athleteId = this.Model.IaafId })" data-id="@this.Model.Id" class="image"/>
-                    </td>
-                }
-                <td class="discipline">@athleteDiscipline.Name:</td>
-                <td>@athleteDiscipline.PlaceDisplay</td>
-            </tr>
-        }
-    </table>
+<div id="athlete-popup-@this.Model.Id" class="popup athlete-popup" title="@this.Model.FullName">
+    <div class="image">
+        <img src="@Url.Action("GetAthleteProfileImage", "Image", new { athleteId = this.Model.IaafId })" data-id="@this.Model.Id" class="image"/>
+    </div>
+    <div class="results">
+        <table>
+            @foreach (var athleteDiscipline in this.Model.Disciplines)
+            {
+                <tr class="discipline">
+                    <td class="label">@athleteDiscipline.Name:</td>
+                    <td class="data">@athleteDiscipline.PlaceDisplay</td>
+                </tr>
+            }
+        </table>
+    </div>
 </div>
 

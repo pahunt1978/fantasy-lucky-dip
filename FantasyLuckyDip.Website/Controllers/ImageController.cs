@@ -15,20 +15,20 @@ namespace FantasyLuckyDip.Website.Controllers
             this.twitterBusinessLogic = twitterBusinessLogic;
         }
 
-        ////[OutputCache(Duration = 86400, VaryByParam = "twitterHandle", Location = OutputCacheLocation.ServerAndClient)]
+        [OutputCache(Duration = 86400, VaryByParam = "twitterHandle", Location = OutputCacheLocation.ServerAndClient)]
         public ActionResult GetTwitterProfileImage(long contestantId, string twitterHandle)
         {
             return MvcApplication.ShowImages ? this.File(this.twitterBusinessLogic.GetProfileImage(twitterHandle), "image/jpeg") : null;
         }
 
-        ////[OutputCache(Duration = int.MaxValue, Location = OutputCacheLocation.ServerAndClient)]
+        [OutputCache(Duration = int.MaxValue, Location = OutputCacheLocation.ServerAndClient)]
         public ActionResult GetNoPictureAvailableImage()
         {
             return MvcApplication.ShowImages ? this.File(Download($"http://www.iaaf.org/Content/img/ui/profile-img-missing.png?v=1267328004"), "image/jpeg") : null;
             
         }
 
-        ////[OutputCache(Duration = int.MaxValue, VaryByParam = "countryIsoCode", Location = OutputCacheLocation.ServerAndClient)]
+        [OutputCache(Duration = int.MaxValue, VaryByParam = "countryIsoCode", Location = OutputCacheLocation.ServerAndClient)]
         public ActionResult GetCountryFlag(string countryIsoCode)
         {
             if (MvcApplication.ShowImages)
@@ -40,7 +40,7 @@ namespace FantasyLuckyDip.Website.Controllers
             return null;
         }
 
-        ////[OutputCache(Duration = int.MaxValue, VaryByParam = "athleteId", Location = OutputCacheLocation.ServerAndClient)]
+        [OutputCache(Duration = int.MaxValue, VaryByParam = "athleteId", Location = OutputCacheLocation.ServerAndClient)]
         public ActionResult GetAthleteProfileImage(long athleteId)
         {
             if (MvcApplication.ShowImages)

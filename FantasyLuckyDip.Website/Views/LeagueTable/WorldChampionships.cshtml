@@ -12,64 +12,69 @@
 {
     var medals = country.Medals.OrderBy(x => x.AthleteSurname).ThenBy(x => x.DisciplineName).ToList();
     var disciplines = country.Disciplines.OrderBy(x => x.Name).ToList();
-    var rowCount = disciplines.Count + medals.Count + (disciplines.Any() ? 3 : 0) + (!disciplines.Any() && medals.Any() ? 1 : 0);
 
-    <div id="country-popup-@country.Id" class="country-popup" title="@country.Name">
-        <table>
-            <tbody>
-                <tr>
-                    <td class="image" rowspan="@rowCount"><img src="@Url.Action("GetCountryFlag", "Image", new { countryIsoCode = country.IsoCode })" /></td>
+    <div id="country-popup-@country.Id" class="popup country-popup" title="@country.Name">
+        <div class="image">
+            <img src="@Url.Action("GetCountryFlag", "Image", new { countryIsoCode = country.IsoCode })" />
+        </div>
+        <div class="results">
+            <table>
+                <tbody>
 
                     @if (disciplines.Any())
                     {
-                        <td class="athlete-discipline">@disciplines[0].Name (@(disciplines[0].Gender == Gender.Male ? "M" : "W")):</td>
+                        <tr class="discipline">
+                            <td>@disciplines[0].Name (@(disciplines[0].Gender == Gender.Male ? "M" : "W")):</td>
                             <td>@disciplines[0].CountryPlaceDisplay</td>
+                        </tr>
                     }
                     else
                     {
-                        <td colspan="2" class="medal-header">Medals</td>
-                    }
-                </tr>
-
-                @for (var i = 1; i < disciplines.Count; i++)
-                {
-                    <tr>                        
-                        <td class="athlete-discipline">@disciplines[i].Name (@(disciplines[i].Gender == Gender.Male ? "M" : "W")):</td>
-                        <td>@disciplines[i].CountryPlaceDisplay</td>
-                    </tr>
-                }
-
-                @if (disciplines.Any())
-                {
-                    <tr class="spacer-row">
-                        <td colspan="2">a</td>
-                    </tr>
                         <tr>
                             <td colspan="2" class="medal-header">Medals</td>
                         </tr>
-                }
+                    }
 
-                @if (medals.Any())
+                    @for (var i = 1; i < disciplines.Count; i++)
+                {
+                        <tr class="discipline">
+                            <td>@disciplines[i].Name (@(disciplines[i].Gender == Gender.Male ? "M" : "W")):</td>
+                            <td>@disciplines[i].CountryPlaceDisplay</td>
+                        </tr>
+                    }
+
+                    @if (disciplines.Any())
+                {
+                        <tr class="spacer-row">
+                            <td colspan="2">a</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="medal-header">Medals</td>
+                        </tr>
+                    }
+
+                    @if (medals.Any())
                 {
                     foreach (var medal in medals)
                     {
+                            <tr>
+                                <td colspan="2" class="medal">@medal.AthleteDiscipline</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
                         <tr>
-                            <td colspan="2" class="medal">@medal.AthleteDiscipline</td>
+                            <td colspan="2" class="medal">None</td>
                         </tr>
                     }
-                }
-                else
-                {
-                    <tr>
-                        <td colspan="2" class="medal">None</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     </div>
 }
 
-<table class="league-table" cellspacing="0" cellpadding="0">
+<table class="league-table">
     <thead>
         <tr>
             <td colspan="3"></td>

@@ -154,37 +154,54 @@ a, u {
     font-size: small;
 }
 
-.athlete-popup {
+/**********/
+/* POP-UP */
+/**********/
+
+.popup {
     display: none;   
     white-space: nowrap;
 }
 
-.athlete-popup .discipline {
-    padding-left: 1em;
-    padding-right: 0.5em;
+.popup div.image {
+    float: left;    
+    margin-right: 1em;    
 }
 
-.athlete-popup .image {
-    vertical-align: top;
+.popup div.image img {
+    border:1px solid #021a40;
+    height: auto;   
+    width: 12em;         
 }
 
-.country-popup {
-    display: none;   
-    white-space: nowrap;
+.popup div.results {
+    float: right;    
 }
 
-.country-popup .athlete-discipline {
-    padding-left: 1em;
-    padding-right: 0.5em;
+.country-popup div.results {    
+    min-width: 12em;
 }
 
-.country-popup .image {
-    vertical-align: top;
-    width: 108px;
+.athlete-popup div.results {    
+    min-width: 8em;
 }
 
-.country-popup table {
-    width: 100%;
+.popup div.results table {
+    width: 100%;    
+}
+
+.popup div.results table .discipline {
+    font-size: smaller;
+}
+
+.popup div.results table .discipline .label {
+    text-align: right;
+    width: 50%;
+}
+
+.popup div.results table .discipline .data {
+    text-align: left;
+    width: 50%;
 }
 
 .spacer-row {
@@ -198,4 +215,5 @@ a, u {
 
 .medal {
     text-align: center;
+    font-size: smaller;
 }

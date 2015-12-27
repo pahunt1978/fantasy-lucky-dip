@@ -14,7 +14,7 @@ function LeagueTableManager() {
 
         var popup = $(popupId).dialog({
             autoOpen: false,
-            width: '30em',
+            width: 'auto',
             modal: true
         });
 
@@ -29,7 +29,7 @@ function LeagueTableManager() {
 
         var popup = $(popupId).dialog({
             autoOpen: false,
-            width: '25em',
+            width: 'auto',
             modal: true
         });
 
